@@ -1,4 +1,7 @@
 const API_URL = "https://lost-and-found-backend-1-pmfp.onrender.com";
+function login() {
+  window.location.href = `${API_URL}/login`;
+}
 
 https://lost-and-found-backend-1-pmfp.onrender.com
 
@@ -166,4 +169,5 @@ async function deleteItem(id) {
 
   loadItems();
 }
+
 
