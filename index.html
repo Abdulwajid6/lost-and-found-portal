@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lost & Found Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <h1>🔐 Lost & Found Portal</h1>
+    <p>Click to continue</p>
+    <button onclick="login()">Login with Google</button>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="appContent" style="display:none;">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Lost & Found</div>
+    <ul class="nav-links">
+      <li><a href="#formSection">Add Item</a></li>
+      <li><a href="#lostFound">Items</a></li>
+      <li><a href="#reported">Reported</a></li>
+    </ul>
+    <div class="auth-controls">
+      <span id="userInfo"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Lost something? Found something?</h1>
+    <p>Report or search lost and found items easily.</p>
+    <a href="#formSection" class="cta-btn">Report Now</a>
+  </section>
+
+  <main>
+    <!-- FORM -->
+    <section id="formSection" class="form-section">
+      <h2>Add Item</h2>
+      <form id="itemForm">
+        <label>Type:
+          <select id="itemType">
+            <option value="lost">Lost</option>
+            <option value="found">Found</option>
+          </select>
+        </label>
+
+        <label>Title <input id="title" required></label>
+        <label>Description <input id="description"></label>
+        <label>Location <input id="location"></label>
+        <label>Date <input type="date" id="date"></label>
+        <label>Contact <input id="contact"></label>
+        <label>Photo URL <input id="photo"></label>
+
+        <button type="submit">Add Item</button>
+        <button type="reset">Clear</button>
+      </form>
+    </section>
+
+    <!-- LIST -->
+    <section id="lostFound" class="list-section">
+      <h2>Lost & Found Items</h2>
+
+      <h3>Lost Items</h3>
+      <ul id="lostList"></ul>
+
+      <h3>Found Items</h3>
+      <ul id="foundList"></ul>
+    </section>
+
+    <!-- REPORTED -->
+    <section id="reported" class="list-section">
+      <h2>Reported Items</h2>
+      <ul id="reportedList"></ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section">
+      <h2>About</h2>
+      <p>This portal helps students report and track lost & found items on campus.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Made with ❤️ by DYNAMIC DYNAMOS</p>
+  </footer>
+
+</div>
+
+<!-- APP LOGIC -->
+<script src="app.js"></script>
+</body>
+</html>
