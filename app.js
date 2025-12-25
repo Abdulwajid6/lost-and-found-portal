@@ -1,4 +1,6 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://lost-and-found-backend-1-pmfp.onrender.com";
+
+https://lost-and-found-backend-1-pmfp.onrender.com
 
 // =========================
 // AUTH / LOGIN (GOOGLE OAUTH)
@@ -164,3 +166,4 @@ async function deleteItem(id) {
 
   loadItems();
 }
+
